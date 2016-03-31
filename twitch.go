@@ -3,7 +3,7 @@ package main
 import "github.com/franela/goreq"
 
 const (
-	TheDivisionURL       = `https://streams.twitch.tv/kraken/streams?limit=10&offset=0&game=Tom+Clancy%27s+The+Division&broadcaster_language=es&on_site=1`
+	TheDivisionURL       = `https://streams.twitch.tv/kraken/streams?limit=10&offset=0&game=Tom+Clancy's+The+Division&broadcaster_language=es&on_site=1`
 	MinNumberOfViewers   = 5
 	MinNumberOfFollowers = 5
 )
