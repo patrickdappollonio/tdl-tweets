@@ -75,11 +75,13 @@ var messages = []string{
 
 // For known people, we convert Twitch usernames to @names
 var conversions = map[string]string{
-	"patrickdap": "marlex",
-	"hawk12fps":  "hawk12fps",
-	"mrjutsu":    "mrjutsu",
-	"mrprobeta":  "mrprobeta",
-	"zeromexico": "ZeroMexico",
+	"patrickdap":  "marlex",
+	"hawk12fps":   "hawk12fps",
+	"mrjutsu":     "mrjutsu",
+	"mrprobeta":   "mrprobeta",
+	"zeromexico":  "ZeroMexico",
+	"boga_xp":     "BoGA_xP",
+	"monstergmer": "MonsterGmer",
 }
 
 func convertToTwitterHandler(channel string) string {
