@@ -24,7 +24,7 @@ func init() {
 }
 
 func homehandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Tweet system for TheDivisionLatino.com")
+	http.Redirect(w, r, "http://www.thedivisionlatino.com/", http.StatusFound)
 }
 
 func taskhandler(w http.ResponseWriter, r *http.Request) {
