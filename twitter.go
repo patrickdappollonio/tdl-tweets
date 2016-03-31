@@ -77,6 +77,8 @@ var conversions = map[string]string{
 	"patrickdap": "marlex",
 	"hawk12fps":  "hawk12fps",
 	"mrjutsu":    "mrjutsu",
+	"mrprobeta":  "mrprobeta",
+	"zeromexico": "ZeroMexico",
 }
 
 func convertToTwitterHandler(channel string) string {
