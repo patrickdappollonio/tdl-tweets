@@ -75,14 +75,23 @@ var messages = []string{
 
 // For known people, we convert Twitch usernames to @names
 var conversions = map[string]string{
-	"patrickdap":  "marlex",
-	"hawk12fps":   "hawk12fps",
-	"mrjutsu":     "mrjutsu",
-	"mrprobeta":   "mrprobeta",
-	"zeromexico":  "ZeroMexico",
-	"boga_xp":     "BoGA_xP",
-	"monstergmer": "MonsterGmer",
-	"victorzcre":  "zucre_",
+	"patrickdap":       "marlex",
+	"hawk12fps":        "hawk12fps",
+	"mrjutsu":          "mrjutsu",
+	"mrprobeta":        "mrprobeta",
+	"zeromexico":       "ZeroMexico",
+	"boga_xp":          "BoGA_xP",
+	"monstergmer":      "MonsterGmer",
+	"victorzcre":       "zucre_",
+	"neisrosver":       "NeisRosver",
+	"vmt85":            "Mantis_V8",
+	"glenfy":           "GlenfyGames",
+	"ardashe":          "Ardashe",
+	"elsuperwtf88":     "ElsupeRWTF88",
+	"lrockyhd":         "lRockyHD",
+	"orihalcon_tsuyoi": "CarlosOrihalcon",
+	"lyberion":         "lyberion",
+	"dopiko":           "DopikoS",
 }
 
 func convertToTwitterHandler(channel string) string {
