@@ -42,7 +42,7 @@ func taskhandler(w http.ResponseWriter, r *http.Request) {
 
 	// Get all streamers that are streaming "The Division"
 	// and matches our requirements
-	streams, err := GetStreamerInfo()
+	streams, err := GetStreamerInfo(ctx)
 
 	// Check if the former was possible
 	if err != nil {
@@ -119,7 +119,7 @@ func imagehandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Try converting the image
-	image, err := ConvertImage(imageURL)
+	image, err := ConvertImage(ctx, imageURL)
 
 	// Check if there was an error
 	if err != nil {

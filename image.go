@@ -4,14 +4,14 @@ import (
 	"bytes"
 	"encoding/base64"
 
-	"github.com/franela/goreq"
+	"golang.org/x/net/context"
 )
 
 // Convert converts an image URL to a base64 string.
 // Useful to POST to any endpoint
-func ConvertImage(image string) (string, error) {
+func ConvertImage(ctx context.Context, image string) (string, error) {
 	// Perform the request with plain go request
-	resp, err := goreq.Request{Uri: image}.Do()
+	resp, err := Request(ctx, image)
 
 	// Check if there was an error
 	if err != nil {

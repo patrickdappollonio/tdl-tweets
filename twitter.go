@@ -33,7 +33,7 @@ func Tweet(s *Stream, ctx context.Context) error {
 	twitterapi.HttpClient.Transport = &urlfetch.Transport{Context: ctx}
 
 	// Convert image to base64-encoded string
-	b64, err := ConvertImage(s.PreviewURL)
+	b64, err := ConvertImage(ctx, s.PreviewURL)
 
 	// Check if it was possible
 	if err != nil {

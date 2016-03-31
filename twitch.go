@@ -1,6 +1,10 @@
 package main
 
-import "github.com/franela/goreq"
+import (
+	"encoding/json"
+
+	"golang.org/x/net/context"
+)
 
 const (
 	TheDivisionURL       = `https://streams.twitch.tv/kraken/streams?limit=10&offset=0&game=Tom+Clancy's+The+Division&broadcaster_language=es&on_site=1`
@@ -20,9 +24,9 @@ type Stream struct {
 }
 
 // GetStreamerInfo returns a list of "The Division" streams in Spanish
-func GetStreamerInfo() ([]*Stream, error) {
+func GetStreamerInfo(ctx context.Context) ([]*Stream, error) {
 	// Perform a request to the given Twitch API URL
-	res, err := goreq.Request{Uri: TheDivisionURL}.Do()
+	res, err := Request(ctx, TheDivisionURL)
 
 	// Check if that was possible
 	if err != nil {
@@ -49,7 +53,8 @@ func GetStreamerInfo() ([]*Stream, error) {
 	}
 
 	// Decode and check for error
-	if err := res.Body.FromJsonTo(&response); err != nil {
+	decoder := json.NewDecoder(res.Body)
+	if err := decoder.Decode(&response); err != nil {
 		return nil, err
 	}
 
