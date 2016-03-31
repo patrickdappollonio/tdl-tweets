@@ -1,0 +1,4 @@
+cron:
+- description: "Finds and tweet new streamers"
+  url: /task
+  schedule: every 5 minutes

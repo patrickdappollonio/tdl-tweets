@@ -1,0 +1,9 @@
+package main
+
+const (
+	API_KEY    = ""
+	API_SECRET = ""
+
+	ACCESS_TOKEN_KEY    = ""
+	ACCESS_TOKEN_SECRET = ""
+)
