@@ -21,7 +21,7 @@ func init() {
 	// Create the routes and call handlers
 	http.HandleFunc("/", homehandler)
 	http.HandleFunc("/task", taskhandler)
-	http.HandleFunc("/image", imagehandler)
+	// http.HandleFunc("/image", imagehandler)
 }
 
 func homehandler(w http.ResponseWriter, r *http.Request) {
