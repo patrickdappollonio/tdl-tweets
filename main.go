@@ -105,6 +105,9 @@ func taskhandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func imagehandler(w http.ResponseWriter, r *http.Request) {
+	// Create a Google AppEngine Context
+	ctx := appengine.NewContext(r)
+
 	// Get the $GET parameter "url" which contains the image URL
 	imageURL := strings.TrimSpace(r.FormValue("url"))
 
