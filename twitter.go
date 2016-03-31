@@ -92,7 +92,7 @@ func convertToTwitterHandler(channel string) string {
 }
 
 func getRandomMessageFormat() string {
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(int64(time.Now().Nanosecond()))
 	return messages[rand.Intn(len(messages))]
 }
 
