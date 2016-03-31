@@ -82,6 +82,7 @@ var conversions = map[string]string{
 	"zeromexico":  "ZeroMexico",
 	"boga_xp":     "BoGA_xP",
 	"monstergmer": "MonsterGmer",
+	"victorzcre":  "zucre_",
 }
 
 func convertToTwitterHandler(channel string) string {
