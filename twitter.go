@@ -104,7 +104,6 @@ var conversions = map[string]string{
 	"carlosbanano":     "_CarlosBanano",
 	"arrasatorr":       "javierarrasa",
 	"riimpo":           "riimpo",
-	"duendepablo":      "DuendeGaming",
 	"neisrosver":       "NeisRosver",
 }
 
