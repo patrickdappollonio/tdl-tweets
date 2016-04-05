@@ -93,6 +93,11 @@ var conversions = map[string]string{
 	"lyberion":         "lyberion",
 	"dopiko":           "DopikoS",
 	"enemykitty":       "enemykitty",
+	"imburundi":        "imburundi",
+	"carlosbanano":     "_CarlosBanano",
+	"arrasatorr":       "javierarrasa",
+	"riimpo":           "riimpo",
+	"duendepablo":      "DuendeGaming",
 }
 
 func convertToTwitterHandler(channel string) string {
