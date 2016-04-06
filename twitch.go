@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"strings"
 
 	"golang.org/x/net/context"
 )
@@ -61,6 +62,11 @@ func GetStreamerInfo(ctx context.Context) ([]*Stream, error) {
 	// Iterate and convert what we need
 	var streamlist []*Stream
 	for _, stream := range response.Streams {
+		// Check if the streamer is blacklisted
+		if isBlacklisted(stream.Channel.DisplayName) {
+			continue
+		}
+
 		// Sorry, but we can't tweet new accounts or with little to no
 		// followers
 		if stream.Channel.Followers < MinNumberOfFollowers {
@@ -85,4 +91,15 @@ func GetStreamerInfo(ctx context.Context) ([]*Stream, error) {
 	}
 
 	return streamlist, nil
+}
+
+// Sorry to these guys, but if we receive a complain because
+// of the content, the streamers we don't want to tweet are stored here
+var blacklisted = map[string]bool{
+	"dopiko": true,
+}
+
+func isBlacklisted(channel string) bool {
+	_, found := blacklisted[strings.ToLower(channel)]
+	return found
 }
