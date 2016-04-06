@@ -100,6 +100,10 @@ var conversions = map[string]string{
 	"mariyolo1":        "Cenandoconlobos",
 	"xboxmexico":       "XboxMexico",
 	"enemykitty":       "enemykitty",
+	"imburundi":        "imburundi",
+	"carlosbanano":     "_CarlosBanano",
+	"arrasatorr":       "javierarrasa",
+	"riimpo":           "riimpo",
 	"neisrosver":       "NeisRosver",
 }
 
