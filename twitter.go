@@ -105,6 +105,7 @@ var conversions = map[string]string{
 	"arrasatorr":       "javierarrasa",
 	"riimpo":           "riimpo",
 	"neisrosver":       "NeisRosver",
+	"dk1nghd":          "danik1ng",
 }
 
 func convertToTwitterHandler(channel string) string {
