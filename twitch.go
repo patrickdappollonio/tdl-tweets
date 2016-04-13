@@ -96,7 +96,8 @@ func GetStreamerInfo(ctx context.Context) ([]*Stream, error) {
 // Sorry to these guys, but if we receive a complain because
 // of the content, the streamers we don't want to tweet are stored here
 var blacklisted = map[string]bool{
-	"dopiko": true,
+	"dopiko":    true,
+	"bebito941": true,
 }
 
 func isBlacklisted(channel string) bool {
