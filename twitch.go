@@ -9,8 +9,8 @@ import (
 
 const (
 	TheDivisionURL       = `https://streams.twitch.tv/kraken/streams?limit=10&offset=0&game=Tom+Clancy's+The+Division&broadcaster_language=es&on_site=1`
-	MinNumberOfViewers   = 15
-	MinNumberOfFollowers = 350
+	MinNumberOfViewers   = 10
+	MinNumberOfFollowers = 300
 )
 
 // Stream contains all needed values for a given stream

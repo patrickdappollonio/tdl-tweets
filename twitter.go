@@ -106,6 +106,16 @@ var conversions = map[string]string{
 	"riimpo":           "riimpo",
 	"neisrosver":       "NeisRosver",
 	"dk1nghd":          "danik1ng",
+	"tavinhokun":       "tavinho_kun",
+	"danstertv":        "danstter",
+	"kraviuz":          "kraviuz",
+	"cordonesdesata2":  "hdcordoneshd",
+	"dopeyferes":       "DopeyFeres",
+	"leduend":          "duend",
+	"alexander_cavali": "AlexanderCavali",
+	"kurojesterhead":   "TanyaGelotte",
+	"javidemon":        "JaViDeMoN_Co",
+	"zenixrevenge":     "zenixrevenge",
 }
 
 func convertToTwitterHandler(channel string) string {
