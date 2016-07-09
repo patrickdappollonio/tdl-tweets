@@ -71,6 +71,12 @@ var messages = []string{
 	`Ganas de ver #TheDivision? Ve al canal de {user}: {url}`,
 	`{user} está en vivo jugando #TheDivision: {url}`,
 	`En vivo: {user} juega #TheDivision: {url}`,
+	`Te invitamos al canal de {user} a ver #TheDivision: {url}`,
+	`Hype de #TheDivision en el canal de {user}: {url}`,
+	`Y @TheDivisionGame se juega en el Canal de {user}: {url}`,
+	`Estamos todos en el Canal de {user} viendo #TheDivision: {url}`,
+	`Únete al stream de {user} que juega @TheDivisionGame: {url}`,
+	`Pasa un buen momento en el canal de {user} que juega #TheDivision: {url}`,
 }
 
 // For known people, we convert Twitch usernames to @names

@@ -12,7 +12,7 @@ import (
 const TWITCH_API_HOST = "api.twitch.tv"
 
 func Request(ctx context.Context, weburl string) (*http.Response, error) {
-	u, err := url.Parse(url)
+	u, err := url.Parse(weburl)
 
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse url: %v", weburl)
