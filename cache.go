@@ -21,7 +21,7 @@ func (c *cache) getKey(s *Stream) *datastore.Key {
 	return datastore.NewKey(c.Context, "Streams", uid, 0, nil)
 }
 
-func (c *cache) IsInStore(s *Stream) bool {
+func (c *cache) IsStreamInStore(s *Stream) bool {
 	var single Stream
 
 	if err := datastore.Get(c.Context, c.getKey(s), &single); err != nil {
@@ -35,7 +35,7 @@ func (c *cache) IsInStore(s *Stream) bool {
 	return true
 }
 
-func (c *cache) SaveToStore(s *Stream) error {
+func (c *cache) SaveStreamToStore(s *Stream) error {
 	if _, err := datastore.Put(c.Context, c.getKey(s), s); err != nil {
 		return err
 	}

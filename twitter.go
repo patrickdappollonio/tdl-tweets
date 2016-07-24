@@ -153,3 +153,34 @@ func createMessage(s *Stream) string {
 
 	return tweetstr
 }
+
+func GetFollowerIDs(ctx context.Context) ([]int64, error) {
+	// Check if twitterapi is nil
+	if twitterapi == nil {
+		return []int64{}, fmt.Errorf("twitterapi: not set!")
+	}
+
+	// Pass default AppEngine transport
+	twitterapi.HttpClient.Transport = &urlfetch.Transport{Context: ctx}
+
+	// Holder for users
+	var userIDs []int64
+	var err error
+
+	// Fetch a list of all followers
+	pages := twitterapi.GetFollowersIdsAll(nil)
+
+	// Iterate over the channel retrieving the values
+	for page := range pages {
+		// Check if there was an error
+		if page.Error != nil {
+			err = page.Error
+			break
+		}
+
+		// If no error, append the new list
+		userIDs = append(userIDs, page.Ids...)
+	}
+
+	return userIDs, err
+}
